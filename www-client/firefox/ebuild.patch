@@ -1,0 +1,39 @@
+67c67
+< 	+system-libvpx +system-webp wayland wifi"
+---
+> 	+system-libvpx +system-webp wayland wifi X"
+70c70,71
+< 	screencast? ( wayland )"
+---
+> 	screencast? ( wayland )
+> 	|| ( wayland X )"
+113,114c114,115
+< 	>=x11-libs/cairo-1.10[X]
+< 	>=x11-libs/gtk+-3.4.0:3[X]
+---
+> 	>=x11-libs/cairo-1.10[X?]
+> 	>=x11-libs/gtk+-3.4.0:3[X?,wayland?]
+134a136,137
+> 	x11-libs/libXi
+> 	x11-libs/libXcursor
+182,184c185
+< 	wayland? ( >=x11-libs/gtk+-3.11:3[wayland] )
+< 	amd64? ( virtual/opengl )
+< 	x86? ( virtual/opengl )"
+---
+> 	wayland? ( >=x11-libs/gtk+-3.11:3[wayland] )"
+612,613d612
+< 		--disable-install-strip \
+< 		--disable-strip \
+614a614,615
+> 		--disable-accessibility \
+> 		--disable-parental-controls \
+943d943
+< 	newins "${FILESDIR}"/distribution.ini distribution.ini
+1053a1054,1059
+> 
+> 	# Workaround for https://bugs.gentoo.org/737256
+> 	if use wayland ; then
+> 		mv "${ED}${MOZILLA_FIVE_HOME}/libmozwayland.so" "${ED}${MOZILLA_FIVE_HOME}/libmozwayland.so.old"
+> 		dosym "/usr/$(get_libdir)/libwayland-client.so" "${MOZILLA_FIVE_HOME}/libmozwayland.so"
+> 	fi

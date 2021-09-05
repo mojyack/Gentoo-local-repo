@@ -26,7 +26,7 @@ DEPEND="
 	>=app-i18n/fcitx5-5.0.8-r3
 "
 RDEPEND="
-	${RDEPEND}
+	${DEPEND}
 	app-i18n/mikan-dictionary
 "
 

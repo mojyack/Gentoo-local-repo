@@ -12,14 +12,14 @@ HOMEPAGE="https://github.com/mojyack/gawl"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/mojyack/gawl.git"
-	KEYWORDS=""
+	KEYWORDS="~*"
 else
-	die "Unsupported version"
+	SRC_URI="https://codeload.github.com/mojyack/gawl/tar.gz/v${PV} -> ${P}.tar.gz"
+	KEYWORDS="~* amd64"
 fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE=""
 DEPEND="
 	>=dev-cpp/waylandpp-0.2.8:0

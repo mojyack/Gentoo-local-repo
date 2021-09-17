@@ -12,17 +12,17 @@ HOMEPAGE="https://github.com/mojyack/imgview"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/mojyack/imgview.git"
-	KEYWORDS=""
+	KEYWORDS="~*"
 else
-	die "Unsupported version"
+	SRC_URI="https://codeload.github.com/mojyack/imgview/tar.gz/v${PV} -> ${P}.tar.gz"
+	KEYWORDS="~* amd64"
 fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE=""
 DEPEND="
-	media-libs/gawl:0
+	=media-libs/gawl-1.0*:0
 "
 RDEPEND="
 	${DEPEND}

@@ -14,7 +14,7 @@ if [[ "${PV}" == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/mojyack/mikan.git"
 	KEYWORDS="~*"
 else
-	SRC_URI="https://codeload.github.com/mojyack/mikan/tar.gz/v${PV} -> ${P}.tar.gz"
+	SRC_URI="https://codeload.github.com/mojyack/mikan/tar.gz/refs/tags/v${PV} -> ${P}.tar.gz"
 	KEYWORDS="~* amd64"
 fi
 

@@ -12,9 +12,10 @@ HOMEPAGE="https://github.com/mojyack/mikan"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/mojyack/mikan.git"
-	KEYWORDS=""
+	KEYWORDS="~*"
 else
-	die "Unsupported version"
+	SRC_URI="https://codeload.github.com/mojyack/mikan/tar.gz/v${PV} -> ${P}.tar.gz"
+	KEYWORDS="~* amd64"
 fi
 
 LICENSE="MIT"

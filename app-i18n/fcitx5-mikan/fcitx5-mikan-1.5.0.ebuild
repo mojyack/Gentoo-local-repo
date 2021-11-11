@@ -31,6 +31,8 @@ RDEPEND="
 	app-i18n/mikan-dictionary
 "
 
+S="${WORKDIR}/mikan-${PV}"
+
 src_configure() {
 	local emesonargs=(
 		--prefix "${EPREFIX}/usr"

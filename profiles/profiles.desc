@@ -1,1 +1,2 @@
-amd64 stripped-system dev
+amd64   stripped-system dev
+amd64   musl-clang      dev

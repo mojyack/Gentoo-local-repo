@@ -1,0 +1,16 @@
+sys-devel/clang             llvm_targets_X86 default-compiler-rt default-lld default-libcxx llvm-libunwind
+sys-devel/clang-runtime     libcxx
+dev-lang/rust               llvm_targets_X86 system-llvm
+sys-devel/llvm              llvm_targets_X86
+sys-libs/libcxxabi          libunwind
+sys-libs/libcxx             libunwind libcxxabi
+virtual/libunwind           llvm-libunwind
+sys-apps/systemd            sysv-utils
+virtual/libudev             systemd
+sys-fs/cryptsetup           udev
+dev-libs/libusb             udev
+virtual/libusb              udev
+sys-apps/util-linux         unicode
+app-arch/unzip              unicode
+sys-apps/less               unicode
+app-shells/bash             readline

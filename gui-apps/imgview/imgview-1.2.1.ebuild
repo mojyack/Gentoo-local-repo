@@ -22,7 +22,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 DEPEND="
-	=media-libs/gawl-2.0*:0
+	=media-libs/gawl-2.1*:0
 "
 RDEPEND="
 	${DEPEND}

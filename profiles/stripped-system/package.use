@@ -10,3 +10,6 @@ sys-apps/systemd            kmod resolvconf sysv-utils zstd
 sys-process/procps          kill
 
 dev-libs/libgcrypt          o-flag-munging
+
+# wireplumber doesn't support luajit
+media-video/wireplumber     lua_single_target_lua5-4

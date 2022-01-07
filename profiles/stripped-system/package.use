@@ -13,3 +13,6 @@ dev-libs/libgcrypt          o-flag-munging
 
 # wireplumber doesn't support luajit
 media-video/wireplumber     lua_single_target_lua5-4
+
+# minimum gcc
+sys-devel/gcc               -pch -sanitize -ssp

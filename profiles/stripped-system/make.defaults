@@ -1,4 +1,4 @@
-USE="-fortran -openmp -gdbm -pcre -man -X -gold -introspection -nls -iptables -seccomp -vala"
+USE="-fortran -openmp -gdbm -pcre -man -X -gold -introspection -nls -iptables -seccomp -vala lto pgo"
 LLVM_TARGETS="-* X86"
 PYTHON_TARGETS="-* python3_9"
 PYTHON_SINGLE_TARGET="-* python3_9"
@@ -9,4 +9,3 @@ PORTDIR="/var/db/repos/gentoo"
 DISTDIR="/var/cache/distfiles"
 PKGDIR="/var/cache/binpkgs"
 PORTAGE_TMPDIR="/tmp"
-

@@ -5,7 +5,6 @@ sys-libs/libcxx             libunwind libcxxabi
 virtual/libunwind           llvm-libunwind
 dev-lang/rust               system-llvm
 
-sys-apps/systemd            policykit
 sys-apps/systemd            kmod resolvconf sysv-utils zstd
 sys-process/procps          kill
 

@@ -3,18 +3,16 @@
 
 EAPI=7
 
-inherit meson
+inherit git-r3 meson
 
 DESCRIPTION="gawl toolkit"
-
 HOMEPAGE="https://github.com/mojyack/gawl"
+EGIT_REPO_URI="https://github.com/mojyack/gawl.git"
 
 if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/mojyack/gawl.git"
 	KEYWORDS="~*"
 else
-	SRC_URI="https://codeload.github.com/mojyack/gawl/tar.gz/v${PV} -> ${P}.tar.gz"
+	EGIT_COMMIT=v${PV}
 	KEYWORDS="~*"
 	if [[ ${PV} != *b ]]; then
 		KEYWORDS="$KEYWORDS amd64"

@@ -8,6 +8,7 @@ inherit git-r3 cmake
 DESCRIPTION="Wayland C++ bindings"
 HOMEPAGE="https://github.com/mojyack/waylandpp"
 EGIT_REPO_URI="https://github.com/mojyack/waylandpp.git"
+KEYWORDS="~*"
 
 LICENSE="MIT"
 IUSE="doc"

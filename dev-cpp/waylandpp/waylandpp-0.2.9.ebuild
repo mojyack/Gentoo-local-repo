@@ -3,16 +3,22 @@
 
 EAPI=7
 
-inherit git-r3 cmake
+inherit cmake
 
 DESCRIPTION="Wayland C++ bindings"
-HOMEPAGE="https://github.com/mojyack/waylandpp"
-EGIT_REPO_URI="https://github.com/mojyack/waylandpp.git"
-KEYWORDS="~*"
+HOMEPAGE="https://github.com/NilsBrause/waylandpp"
 
 LICENSE="MIT"
 IUSE="doc"
 SLOT="0/$(ver_cut 1-2)"
+
+if [[ ${PV} == *9999 ]] ; then
+	EGIT_REPO_URI="https://github.com/NilsBrause/waylandpp.git"
+	inherit git-r3
+else
+	SRC_URI="https://github.com/NilsBrause/waylandpp/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="amd64 ~arm arm64 x86"
+fi
 
 RDEPEND="
 	>=dev-libs/wayland-1.11.0

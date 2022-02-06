@@ -23,10 +23,11 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 DEPEND="
-	>=dev-libs/wayland-1.11.0
 	>=dev-libs/wayland-protocols-1.24
-	media-libs/mesa[wayland]
+	dev-util/wayland-scanner
 "
 RDEPEND="
 	${DEPEND}
+	>=dev-libs/wayland-1.11.0
+	media-libs/mesa[wayland]
 "

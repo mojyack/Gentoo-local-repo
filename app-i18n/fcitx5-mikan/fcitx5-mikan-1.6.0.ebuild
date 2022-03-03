@@ -3,24 +3,24 @@
 
 EAPI=7
 
-inherit meson
+inherit git-r3 meson
 
 DESCRIPTION="mikan Support for Fcitx5"
-
 HOMEPAGE="https://github.com/mojyack/mikan"
+EGIT_REPO_URI="https://github.com/mojyack/mikan.git"
 
 if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/mojyack/mikan.git"
 	KEYWORDS="~*"
 else
-	SRC_URI="https://codeload.github.com/mojyack/mikan/tar.gz/refs/tags/v${PV} -> ${P}.tar.gz"
-	KEYWORDS="~* amd64"
+	EGIT_COMMIT=v${PV}
+	KEYWORDS="~*"
+	if [[ ${PV} != *b ]]; then
+		KEYWORDS="$KEYWORDS amd64"
+	fi
 fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE=""
 DEPEND="
 	>=app-text/mecab-0.996-r1:0

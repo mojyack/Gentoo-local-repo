@@ -22,7 +22,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="acl addc ads ceph client cluster cpu_flags_x86_aes cups debug dmapi fam
+IUSE="acl addc ads ceph client cluster cpu_flags_x86_aes cups debug fam
 glusterfs gpg iprint json ldap pam profiling-data python quota +regedit selinux
 snapper spotlight syslog system-heimdal +system-mitkrb5 systemd test winbind
 zeroconf"
@@ -96,11 +96,10 @@ COMMON_DEPEND="
 	cluster? ( net-libs/rpcsvc-proto )
 	cups? ( net-print/cups )
 	debug? ( dev-util/lttng-ust )
-	dmapi? ( sys-apps/dmapi )
 	fam? ( virtual/fam )
 	gpg? ( app-crypt/gpgme:= )
 	json? ( dev-libs/jansson:= )
-	ldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
+	ldap? ( net-nds/openldap:=[${MULTILIB_USEDEP}] )
 	pam? ( sys-libs/pam )
 	python? (
 		sys-libs/ldb[python,${PYTHON_SINGLE_USEDEP}]
@@ -110,7 +109,7 @@ COMMON_DEPEND="
 	)
 	snapper? ( sys-apps/dbus )
 	system-heimdal? ( >=app-crypt/heimdal-1.5[-ssl,${MULTILIB_USEDEP}] )
-	system-mitkrb5? ( >=app-crypt/mit-krb5-1.15.1[${MULTILIB_USEDEP}] )
+	system-mitkrb5? ( >=app-crypt/mit-krb5-1.19[${MULTILIB_USEDEP}] )
 	systemd? ( sys-apps/systemd:0= )
 	zeroconf? ( net-dns/avahi[dbus] )
 "
@@ -217,7 +216,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable ceph cephfs)
 		$(multilib_native_use_with cluster cluster-support)
 		$(multilib_native_use_enable cups)
-		$(multilib_native_use_with dmapi)
+		--without-dmapi
 		$(multilib_native_use_with fam)
 		$(multilib_native_use_enable glusterfs)
 		$(multilib_native_use_with gpg gpgme)

@@ -27,6 +27,7 @@ DEPEND="
 	>=media-libs/libglvnd-1.3.3:0
 	>=media-libs/freetype-2.10.4:2
 	>=media-gfx/imagemagick-7.0.1.4:0
+	>=x11-libs/libxkbcommon-1.3.1
 "
 RDEPEND="
 	${DEPEND}

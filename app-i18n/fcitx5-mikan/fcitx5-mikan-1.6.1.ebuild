@@ -24,7 +24,7 @@ SLOT="0"
 IUSE=""
 DEPEND="
 	>=app-text/mecab-0.996-r1:0
-	>=app-i18n/fcitx5-5.0.8-r3
+	>=app-i18n/fcitx-5.0.9
 "
 RDEPEND="
 	${DEPEND}

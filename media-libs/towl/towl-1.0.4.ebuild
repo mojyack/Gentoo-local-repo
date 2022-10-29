@@ -23,7 +23,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 DEPEND="
-	>=dev-libs/wayland-protocols-1.24
+	>=dev-libs/wayland-protocols-1.26
 	dev-util/wayland-scanner
 "
 RDEPEND="

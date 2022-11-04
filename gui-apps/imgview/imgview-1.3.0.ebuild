@@ -25,6 +25,7 @@ IUSE=""
 DEPEND="
 	>=media-libs/gawl-2.3.12:0
 	<media-libs/gawl-2.4:0
+	>=media-gfx/imagemagick-7.1.0.44:0
 "
 RDEPEND="
 	${DEPEND}

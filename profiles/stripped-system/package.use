@@ -1,7 +1,8 @@
-sys-devel/clang             default-compiler-rt default-lld default-libcxx llvm-libunwind
+sys-devel/clang-common      default-compiler-rt default-lld default-libcxx llvm-libunwind
 sys-devel/clang-runtime     libcxx
 sys-libs/libcxxabi          libunwind
 sys-libs/libcxx             libunwind libcxxabi
+sys-libs/compiler-rt        clang
 sys-libs/compiler-rt-sanitizers profile
 virtual/libunwind           llvm-libunwind
 dev-lang/rust               system-llvm

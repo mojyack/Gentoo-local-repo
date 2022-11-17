@@ -5,9 +5,9 @@ EAPI=7
 
 inherit git-r3 meson
 
-DESCRIPTION="template oriented wayland library"
-HOMEPAGE="https://github.com/mojyack/towl"
-EGIT_REPO_URI="https://github.com/mojyack/towl.git"
+DESCRIPTION="gawl toolkit"
+HOMEPAGE="https://github.com/mojyack/gawl"
+EGIT_REPO_URI="https://github.com/mojyack/gawl.git"
 
 if [[ "${PV}" == 9999 ]]; then
 	KEYWORDS="~*"
@@ -23,11 +23,13 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 DEPEND="
-	>=dev-libs/wayland-protocols-1.26
-	dev-util/wayland-scanner
+	>=media-libs/towl-1.0.5:0
+	>=media-libs/libglvnd-1.3.3:0
+	>=media-libs/freetype-2.10.4:2
+	>=media-gfx/imagemagick-7.0.1.4:0
+	>=x11-libs/libxkbcommon-1.3.1:0
+	>=media-libs/libjxl-0.7.0_pre20220825:0
 "
 RDEPEND="
 	${DEPEND}
-	>=dev-libs/wayland-1.11.0
-	media-libs/mesa[wayland]
 "

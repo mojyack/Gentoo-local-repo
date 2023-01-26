@@ -1,3 +1,5 @@
+sys-devel/llvm              -binutils-plugin
+
 sys-devel/clang-common      default-compiler-rt default-lld default-libcxx llvm-libunwind
 sys-devel/clang-runtime     libcxx
 sys-libs/libcxxabi          libunwind

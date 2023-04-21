@@ -30,12 +30,3 @@ RDEPEND="
 	${DEPEND}
 	app-i18n/mikan-dictionary
 "
-
-src_configure() {
-	local emesonargs=(
-		--prefix "${EPREFIX}/usr"
-		--libdir "$(get_libdir)/fcitx5"
-		-Ddictionary_path=share/mikan-im/dic
-	)
-	meson_src_configure
-}

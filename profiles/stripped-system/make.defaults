@@ -1,5 +1,4 @@
 USE="-fortran -openmp -gdbm -pcre -man -X -gold -introspection -nls -iptables -seccomp -vala lto pgo"
-LLVM_TARGETS="-* X86"
 PYTHON_TARGETS="-* python3_11"
 PYTHON_SINGLE_TARGET="-* python3_11"
 LUA_TARGETS="-* luajit"

@@ -1,3 +1,4 @@
 amd64 stripped-system dev
 amd64 stripped-multilib-system dev
+amd64 stripped-aarch64-system dev
 amd64 container dev

@@ -9,7 +9,7 @@ SRC_URI="https://github.com/mojyack/mikan-dictionary/releases/download/2021-09-0
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 IUSE=""
 DEPEND="
 	>=app-text/mecab-0.996-r1:0

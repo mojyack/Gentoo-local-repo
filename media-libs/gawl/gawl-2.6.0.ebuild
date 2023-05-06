@@ -9,16 +9,7 @@ DESCRIPTION="gawl toolkit"
 HOMEPAGE="https://github.com/mojyack/gawl"
 EGIT_REPO_URI="https://github.com/mojyack/gawl.git"
 
-if [[ "${PV}" == 9999 ]]; then
-	KEYWORDS="~*"
-else
-	EGIT_COMMIT=v${PV}
-	KEYWORDS="~*"
-	if [[ ${PV} != *b ]]; then
-		KEYWORDS="$KEYWORDS amd64"
-	fi
-fi
-
+KEYWORDS="amd64 arm64"
 LICENSE="MIT"
 SLOT="0"
 IUSE=""

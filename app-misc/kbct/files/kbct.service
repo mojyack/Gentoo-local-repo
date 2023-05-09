@@ -3,7 +3,7 @@ Description=Keyboard keycode mapping daemon supporting layered configuration
 
 [Service]
 Type=simple
-ExecStart=kbct remap --config /etc/kbct/config.yml
+ExecStart=kbct remap --config /etc/kbct/config.yaml
 Restart=always
 
 [Install]

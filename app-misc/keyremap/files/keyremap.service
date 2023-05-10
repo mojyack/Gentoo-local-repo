@@ -1,0 +1,10 @@
+[Unit]
+Description=Input remap daemon
+
+[Service]
+Type=simple
+ExecStart=keyremap run /etc/keyremap/config
+Restart=always
+
+[Install]
+WantedBy=default.target

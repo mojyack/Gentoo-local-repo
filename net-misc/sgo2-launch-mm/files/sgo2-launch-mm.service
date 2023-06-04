@@ -1,0 +1,10 @@
+[Unit]
+Description=Properly initialize Qualcomm X16 modem and launch ModemManager
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/usr/sbin/sgo2-launch-mm
+
+[Install]
+WantedBy=multi-user.target

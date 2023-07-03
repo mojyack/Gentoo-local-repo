@@ -8,6 +8,7 @@ inherit git-r3 meson
 DESCRIPTION="simple webcam app for wayland"
 HOMEPAGE="https://github.com/mojyack/wlcam"
 EGIT_REPO_URI="https://github.com/mojyack/wlcam.git"
+EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"

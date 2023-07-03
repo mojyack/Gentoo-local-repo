@@ -8,6 +8,7 @@ inherit git-r3 meson
 DESCRIPTION="gawl toolkit"
 HOMEPAGE="https://github.com/mojyack/gawl"
 EGIT_REPO_URI="https://github.com/mojyack/gawl.git"
+EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"

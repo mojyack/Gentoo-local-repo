@@ -8,6 +8,7 @@ inherit git-r3 meson
 DESCRIPTION="mikan Support for Fcitx5"
 HOMEPAGE="https://github.com/mojyack/mikan"
 EGIT_REPO_URI="https://github.com/mojyack/mikan.git"
+EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"

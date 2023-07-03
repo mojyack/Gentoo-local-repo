@@ -8,6 +8,8 @@ inherit git-r3 meson
 DESCRIPTION="Graphical v4l2-ctl for wayland"
 HOMEPAGE="https://github.com/mojyack/v4l2-wlctl"
 EGIT_REPO_URI="https://github.com/mojyack/v4l2-wlctl.git"
+EGIT_COMMIT="$PV"
+EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"

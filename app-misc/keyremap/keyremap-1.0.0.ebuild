@@ -8,6 +8,7 @@ inherit git-r3 meson systemd
 DESCRIPTION="Input remap daemon for Linux"
 HOMEPAGE="https://github.com/mojyack/keyremap"
 EGIT_REPO_URI="https://github.com/mojyack/keyremap.git"
+EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64"
 LICENSE="MIT"

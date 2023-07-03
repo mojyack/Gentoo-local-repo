@@ -8,6 +8,7 @@ inherit git-r3 meson
 DESCRIPTION="a simple image viewer"
 HOMEPAGE="https://github.com/mojyack/imgview"
 EGIT_REPO_URI="https://github.com/mojyack/imgview.git"
+EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"

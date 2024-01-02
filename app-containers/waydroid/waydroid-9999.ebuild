@@ -34,6 +34,7 @@ RDEPEND="
 		>=dev-python/pyclip-0.7.0[wayland,${PYTHON_USEDEP}]
 	')
 	net-firewall/nftables
+	net-firewall/iptables
 	net-dns/dnsmasq
 	>=dev-libs/libglibutil-1.0.67
 	>=dev-libs/gbinder-1.1.21

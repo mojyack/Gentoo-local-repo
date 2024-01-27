@@ -12,7 +12,7 @@ EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/${PV##*.}"
 IUSE=""
 DEPEND="
 	>=dev-libs/wayland-protocols-1.26

@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -12,10 +12,10 @@ EGIT_COMMIT="v$PV"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/${PV##*.}"
 IUSE=""
 DEPEND="
-	>=media-libs/towl-1.2:0
+	>=media-libs/towl-1.2:=
 	>=media-libs/libglvnd-1.3.3:0
 	>=media-libs/freetype-2.10.4:2
 	>=media-gfx/imagemagick-7.0.1.4:0

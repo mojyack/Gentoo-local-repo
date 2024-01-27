@@ -15,8 +15,8 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 DEPEND="
-	>=media-libs/gawl-2.6:0
-	<media-libs/gawl-2.7:0
+	>=media-libs/gawl-2.6:=
+	<media-libs/gawl-2.7:=
 	>=media-gfx/imagemagick-7.1.0.44:0
 "
 RDEPEND="

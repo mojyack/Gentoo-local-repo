@@ -1,0 +1,10 @@
+USE="-fortran -openmp -gdbm -pcre -man -X -gold -introspection -nls -iptables -seccomp -vala -systemd lto pgo"
+PYTHON_TARGETS="-* python3_11"
+PYTHON_SINGLE_TARGET="-* python3_11"
+LUA_TARGETS="-* luajit"
+LUA_SINGLE_TARGET="-* luajit"
+
+PORTDIR="/var/db/repos/gentoo"
+DISTDIR="/var/cache/distfiles"
+PKGDIR="/var/cache/binpkgs"
+PORTAGE_TMPDIR="/tmp"

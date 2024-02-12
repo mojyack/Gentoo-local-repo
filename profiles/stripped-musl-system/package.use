@@ -1,1 +1,5 @@
-media-video/wireplumber     lua_single_target_lua5-4
+# pgo support
+sys-libs/compiler-rt            sanitize
+
+# wireplumber does not support <= lua-5.2
+media-video/wireplumber         lua_single_target_lua5-4

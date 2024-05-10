@@ -1,6 +1,6 @@
 USE="-fortran -openmp -gdbm -pcre -man -X -gold -introspection -nls -iptables -seccomp -vala -systemd lto pgo"
-PYTHON_TARGETS="-* python3_11"
-PYTHON_SINGLE_TARGET="-* python3_11"
+PYTHON_TARGETS="-* python3_12"
+PYTHON_SINGLE_TARGET="-* python3_12"
 LUA_TARGETS="-* luajit"
 LUA_SINGLE_TARGET="-* luajit"
 

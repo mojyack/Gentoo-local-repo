@@ -1,0 +1,6 @@
+28,32d27
+< 
+< 		# Bug #923177
+< 		# find_library(... atomic) appears to not work. Fall back to -latomic
+< 		-DMI_USE_LIBATOMIC=ON
+< 

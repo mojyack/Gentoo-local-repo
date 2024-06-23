@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -15,13 +15,19 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="ipu3"
 DEPEND="
-	>=media-libs/gawl-2.6.2:=
-	<media-libs/gawl-2.7:0
-	>=media-libs/libjpeg-turbo-2.1.3:0
+	dev-libs/wayland-protocols
+	dev-util/wayland-scanner
+
+	media-libs/libglvnd
+	media-libs/freetype
+	media-gfx/imagemagick
+	media-libs/libjxl
 	ipu3? ( virtual/libudev )
 "
 RDEPEND="
 	${DEPEND}
+	dev-libs/wayland
+	media-libs/mesa[wayland]
 "
 
 src_configure() {

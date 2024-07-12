@@ -5,19 +5,19 @@ Date:   Fri Apr 21 18:47:37 2023 +0200
     drop -latomic (none in pure-llvm env)
 
 diff --git a/node.gyp b/node.gyp
-index f092c332..ddbd8085 100644
+index 2a8e6a6..c01caa0 100644
 --- a/node.gyp
 +++ b/node.gyp
-@@ -418,9 +418,6 @@
+@@ -507,9 +507,6 @@
            '-Wl,-bnoerrmsg',
          ],
        }],
--      ['OS == "linux" and llvm_version != "0.0"', {
+-      ['OS=="linux" and clang==1', {
 -        'libraries': ['-latomic'],
 -      }],
      ],
    },
- 
+
 diff --git a/tools/v8_gypfiles/v8.gyp b/tools/v8_gypfiles/v8.gyp
 index 4ed21761..b00c158b 100644
 --- a/tools/v8_gypfiles/v8.gyp

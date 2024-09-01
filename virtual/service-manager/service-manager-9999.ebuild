@@ -21,6 +21,7 @@ RDEPEND="
 					sys-apps/s6-rc
 					sys-apps/systemd
 					sys-apps/runit
+					sys-apps/daemonfs
 					virtual/daemontools
 				)
 			)

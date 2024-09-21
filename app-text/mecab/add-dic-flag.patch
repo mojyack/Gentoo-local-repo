@@ -1,0 +1,10 @@
+15c15
+< IUSE="static-libs unicode"
+---
+> IUSE="static-libs unicode dic"
+24c24
+< 	|| (
+---
+> 	dic? ( || (
+26a27
+> 	)

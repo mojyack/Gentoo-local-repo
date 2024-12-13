@@ -1,5 +1,5 @@
 # pgo support
-sys-devel/clang-runtime         sanitize
+llvm-core/clang-runtime         sanitize
 
 # wireplumber does not support <= lua-5.2
 media-video/wireplumber         lua_single_target_lua5-4

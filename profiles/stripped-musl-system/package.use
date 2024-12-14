@@ -1,5 +1,8 @@
 # pgo support
 llvm-core/clang-runtime         sanitize
+# since 19, need to set DCOMPILER_RT_BUILD_SANITIZERS to build
+# to achieve this, we must set one of $SANITIZER_FLAGS
+llvm-runtimes/compiler-rt-sanitizers ubsan
 
 # wireplumber does not support <= lua-5.2
 media-video/wireplumber         lua_single_target_lua5-4

@@ -1,3 +1,4 @@
 arm   stripped-arm-musl-system     dev
 arm64 stripped-arm64-musl-system   dev
 amd64 stripped-musl-system         dev
+amd64 stripped-ppc64-musl-system   dev

@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Virtual for various service managers"
 
 SLOT="0"
-KEYWORDS="amd64 arm arm64"
+KEYWORDS="amd64 arm arm64 ppc64"
 
 RDEPEND="
 	prefix-guest? ( >=sys-apps/baselayout-prefix-2.2 )

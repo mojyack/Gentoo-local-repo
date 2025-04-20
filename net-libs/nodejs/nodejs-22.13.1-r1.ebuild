@@ -20,7 +20,7 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 	SLOT="0/$(ver_cut 1)"
-	KEYWORDS="amd64 ~arm arm64 ~loong ~ppc64 ~riscv ~x86 ~amd64-linux ~x64-macos"
+	KEYWORDS="amd64 arm arm64 ~loong ~ppc64 ~riscv ~x86 ~amd64-linux ~x64-macos"
 	S="${WORKDIR}/node-v${PV}"
 fi
 
@@ -48,7 +48,10 @@ RDEPEND=">=app-arch/brotli-1.1.0:=
 		>=dev-libs/openssl-1.1.1:0=
 	)
 	!system-ssl? ( >=net-libs/ngtcp2-1.9.1:=[-gnutls] )
-	virtual/libatomic"
+	|| (
+		sys-devel/gcc:*
+		llvm-runtimes/libatomic-stub
+	)"
 BDEPEND="${PYTHON_DEPS}
 	app-alternatives/ninja
 	sys-apps/coreutils

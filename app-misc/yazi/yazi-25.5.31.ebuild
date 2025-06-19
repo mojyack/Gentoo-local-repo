@@ -48,7 +48,7 @@ CRATES="
 	bytes@1.10.1
 	cassowary@0.3.0
 	castaway@0.2.3
-	cc@1.2.24
+	cc@1.2.25
 	cfg-expr@0.15.8
 	cfg-if@1.0.0
 	chrono@0.4.41
@@ -152,7 +152,7 @@ CRATES="
 	linux-raw-sys@0.4.15
 	linux-raw-sys@0.9.4
 	litrs@0.4.1
-	lock_api@0.4.12
+	lock_api@0.4.13
 	log@0.4.27
 	loop9@0.1.5
 	lru@0.12.5
@@ -199,8 +199,8 @@ CRATES="
 	palette@0.7.6
 	palette_derive@0.7.6
 	parking@2.2.1
-	parking_lot@0.12.3
-	parking_lot_core@0.9.10
+	parking_lot@0.12.4
+	parking_lot_core@0.9.11
 	paste@1.0.15
 	percent-encoding@2.3.1
 	pin-project-lite@0.2.16

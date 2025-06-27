@@ -3,12 +3,11 @@
 
 EAPI=7
 
-inherit git-r3 meson
+inherit meson
 
 DESCRIPTION="mikan Support for Fcitx5"
 HOMEPAGE="https://github.com/mojyack/mikan"
-EGIT_REPO_URI="https://github.com/mojyack/mikan.git"
-EGIT_COMMIT="v$PV"
+SRC_URI="https://github.com/mojyack/mikan/releases/download/v${PV}/mikan-${PV}.tar.gz"
 
 KEYWORDS="amd64 arm64"
 LICENSE="MIT"
@@ -22,6 +21,8 @@ RDEPEND="
 	${DEPEND}
 	app-i18n/mikan-dictionary
 "
+
+S="${WORKDIR}/mikan-${PV}"
 
 src_configure() {
        local emesonargs=(

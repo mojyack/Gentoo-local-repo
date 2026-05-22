@@ -37,9 +37,9 @@ CRATES="
 	avif-serialize@0.8.6
 	backtrace@0.3.76
 	base16ct@0.2.0
-	base16ct@0.3.0
+	base16ct@1.0.0
 	base64@0.22.1
-	base64ct@1.8.1
+	base64ct@1.8.2
 	bcrypt-pbkdf@0.10.0
 	better-panic@0.3.0
 	bincode@1.3.3
@@ -72,14 +72,15 @@ CRATES="
 	chacha20@0.9.1
 	chrono@0.4.42
 	cipher@0.4.4
-	clap@4.5.53
-	clap_builder@4.5.53
-	clap_complete@4.5.62
+	clap@4.5.54
+	clap_builder@4.5.54
+	clap_complete@4.5.64
 	clap_complete_fig@4.5.2
 	clap_complete_nushell@4.5.10
 	clap_derive@4.5.49
 	clap_lex@0.7.6
 	clipboard-win@5.4.1
+	cmov@0.4.3
 	color_quant@1.1.0
 	colorchoice@1.0.4
 	compact_str@0.9.0
@@ -102,17 +103,21 @@ CRATES="
 	crossterm_winapi@0.9.1
 	crunchy@0.2.4
 	crypto-bigint@0.5.5
-	crypto-bigint@0.7.0-rc.10
+	crypto-bigint@0.7.0-rc.13
 	crypto-common@0.1.7
 	crypto-common@0.2.0-rc.8
-	crypto-primes@0.7.0-pre.4
+	crypto-primes@0.7.0-pre.5
 	csscolorparser@0.6.2
 	ctr@0.9.2
+	ctutils@0.3.1
 	curve25519-dalek-derive@0.1.1
 	curve25519-dalek@4.1.3
 	darling@0.20.11
+	darling@0.23.0
 	darling_core@0.20.11
+	darling_core@0.23.0
 	darling_macro@0.20.11
+	darling_macro@0.23.0
 	data-encoding@2.9.0
 	deadpool-runtime@0.1.4
 	deadpool@0.12.3
@@ -205,7 +210,7 @@ CRATES="
 	inotify-sys@0.1.5
 	inotify@0.11.0
 	inout@0.1.4
-	instability@0.3.10
+	instability@0.3.11
 	internal-russh-forked-ssh-key@0.6.16+upstream-0.6.7
 	interpolate_name@0.2.4
 	is_terminal_polyfill@1.70.2
@@ -220,7 +225,7 @@ CRATES="
 	lab@0.11.0
 	lazy_static@1.5.0
 	lebe@0.5.3
-	libc@0.2.178
+	libc@0.2.179
 	libcrux-intrinsics@0.0.4
 	libcrux-ml-kem@0.0.4
 	libcrux-platform@0.0.2
@@ -302,10 +307,10 @@ CRATES="
 	pem-rfc7468@0.7.0
 	pem-rfc7468@1.0.0
 	percent-encoding@2.3.2
-	pest@2.8.4
-	pest_derive@2.8.4
-	pest_generator@2.8.4
-	pest_meta@2.8.4
+	pest@2.8.5
+	pest_derive@2.8.5
+	pest_generator@2.8.5
+	pest_meta@2.8.5
 	phf@0.11.3
 	phf_codegen@0.11.3
 	phf_generator@0.11.3
@@ -367,7 +372,7 @@ CRATES="
 	rfc6979@0.4.0
 	rgb@0.8.52
 	ring@0.17.14
-	rsa@0.10.0-rc.10
+	rsa@0.10.0-rc.11
 	russh-cryptovec@0.52.0
 	russh-util@0.52.0
 	russh@0.56.0
@@ -391,7 +396,7 @@ CRATES="
 	serde_derive@1.0.228
 	serde_json@1.0.148
 	serde_spanned@1.0.4
-	serdect@0.4.1
+	serdect@0.4.2
 	sha1@0.10.6
 	sha1@0.11.0-rc.3
 	sha2@0.10.9
@@ -400,8 +405,9 @@ CRATES="
 	shlex@1.3.0
 	signal-hook-mio@0.2.5
 	signal-hook-registry@1.4.8
-	signal-hook-tokio@0.3.1
+	signal-hook-tokio@0.4.0
 	signal-hook@0.3.18
+	signal-hook@0.4.1
 	signature@2.2.0
 	signature@3.0.0-rc.6
 	simd-adler32@0.3.8
@@ -423,7 +429,7 @@ CRATES="
 	strum_macros@0.27.2
 	subtle@2.6.1
 	syn@1.0.109
-	syn@2.0.111
+	syn@2.0.113
 	syntect@5.3.0
 	tap@1.0.1
 	terminfo@0.9.0
@@ -445,7 +451,7 @@ CRATES="
 	tokio-macros@2.6.0
 	tokio-stream@0.1.17
 	tokio-util@0.7.17
-	tokio@1.48.0
+	tokio@1.49.0
 	toml@0.9.10+spec-1.1.0
 	toml_datetime@0.7.5+spec-1.1.0
 	toml_parser@1.0.6+spec-1.1.0
@@ -548,8 +554,8 @@ CRATES="
 	zerocopy-derive@0.8.31
 	zerocopy@0.8.31
 	zeroize@1.8.2
-	zeroize_derive@1.4.2
-	zmij@1.0.2
+	zeroize_derive@1.4.3
+	zmij@1.0.9
 	zune-core@0.5.0
 	zune-inflate@0.2.54
 	zune-jpeg@0.5.8

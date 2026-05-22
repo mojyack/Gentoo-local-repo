@@ -16,7 +16,7 @@ CRATES="
 	aligned@0.4.3
 	allocator-api2@0.2.21
 	android_system_properties@0.1.5
-	ansi-to-tui@8.0.0
+	ansi-to-tui@8.0.1
 	anstream@0.6.21
 	anstyle-parse@0.2.7
 	anstyle-query@1.1.5
@@ -39,7 +39,7 @@ CRATES="
 	base16ct@0.2.0
 	base16ct@1.0.0
 	base64@0.22.1
-	base64ct@1.8.2
+	base64ct@1.8.3
 	bcrypt-pbkdf@0.10.0
 	better-panic@0.3.0
 	bincode@1.3.3
@@ -66,27 +66,27 @@ CRATES="
 	bytes@1.11.0
 	castaway@0.2.4
 	cbc@0.1.2
-	cc@1.2.51
+	cc@1.2.53
 	cfg-if@1.0.4
 	cfg_aliases@0.2.1
 	chacha20@0.9.1
-	chrono@0.4.42
+	chrono@0.4.43
 	cipher@0.4.4
 	clap@4.5.54
 	clap_builder@4.5.54
-	clap_complete@4.5.64
+	clap_complete@4.5.65
 	clap_complete_fig@4.5.2
 	clap_complete_nushell@4.5.10
 	clap_derive@4.5.49
-	clap_lex@0.7.6
+	clap_lex@0.7.7
 	clipboard-win@5.4.1
-	cmov@0.4.3
+	cmov@0.5.0-pre.0
 	color_quant@1.1.0
 	colorchoice@1.0.4
 	compact_str@0.9.0
 	concurrent-queue@2.5.0
 	console@0.15.11
-	const-oid@0.10.1
+	const-oid@0.10.2
 	const-oid@0.9.6
 	convert_case@0.10.0
 	core-foundation-sys@0.8.7
@@ -103,13 +103,13 @@ CRATES="
 	crossterm_winapi@0.9.1
 	crunchy@0.2.4
 	crypto-bigint@0.5.5
-	crypto-bigint@0.7.0-rc.13
+	crypto-bigint@0.7.0-rc.18
 	crypto-common@0.1.7
-	crypto-common@0.2.0-rc.8
-	crypto-primes@0.7.0-pre.5
+	crypto-common@0.2.0-rc.10
+	crypto-primes@0.7.0-pre.6
 	csscolorparser@0.6.2
 	ctr@0.9.2
-	ctutils@0.3.1
+	ctutils@0.3.2
 	curve25519-dalek-derive@0.1.1
 	curve25519-dalek@4.1.3
 	darling@0.20.11
@@ -118,7 +118,7 @@ CRATES="
 	darling_core@0.23.0
 	darling_macro@0.20.11
 	darling_macro@0.23.0
-	data-encoding@2.9.0
+	data-encoding@2.10.0
 	deadpool-runtime@0.1.4
 	deadpool@0.12.3
 	delegate@0.13.5
@@ -132,7 +132,7 @@ CRATES="
 	derive_more-impl@2.1.1
 	derive_more@2.1.1
 	digest@0.10.7
-	digest@0.11.0-rc.5
+	digest@0.11.0-rc.6
 	dirs-sys@0.5.0
 	dirs@6.0.0
 	document-features@0.2.12
@@ -150,20 +150,22 @@ CRATES="
 	erased-serde@0.4.9
 	errno@0.3.14
 	error-code@3.3.2
-	euclid@0.22.11
+	euclid@0.22.13
 	event-listener@4.0.3
 	exr@1.74.0
 	fancy-regex@0.11.0
 	fast-srgb8@1.0.0
+	fax@0.2.6
+	fax_derive@0.2.0
 	fdeflate@0.3.7
 	fdlimit@0.3.0
 	ff@0.13.1
 	fiat-crypto@0.2.9
 	filedescriptor@0.8.3
-	find-msvc-tools@0.1.6
+	find-msvc-tools@0.1.8
 	finl_unicode@1.4.0
 	fixedbitset@0.4.2
-	flate2@1.1.5
+	flate2@1.1.8
 	fnv@1.0.7
 	foldhash@0.2.0
 	fsevent-sys@4.1.0
@@ -179,7 +181,7 @@ CRATES="
 	futures@0.3.31
 	generic-array@0.14.7
 	generic-array@1.3.5
-	getrandom@0.2.16
+	getrandom@0.2.17
 	getrandom@0.3.4
 	ghash@0.5.1
 	gif@0.14.1
@@ -205,7 +207,7 @@ CRATES="
 	image-webp@0.2.4
 	image@0.25.9
 	imgref@1.12.0
-	indexmap@2.12.1
+	indexmap@2.13.0
 	indoc@2.0.7
 	inotify-sys@0.1.5
 	inotify@0.11.0
@@ -214,18 +216,17 @@ CRATES="
 	internal-russh-forked-ssh-key@0.6.16+upstream-0.6.7
 	interpolate_name@0.2.4
 	is_terminal_polyfill@1.70.2
-	itertools@0.13.0
 	itertools@0.14.0
 	itoa@1.0.17
 	jobserver@0.1.34
-	js-sys@0.3.83
+	js-sys@0.3.85
 	kasuari@0.4.11
 	kqueue-sys@1.0.4
 	kqueue@1.1.1
 	lab@0.11.0
 	lazy_static@1.5.0
 	lebe@0.5.3
-	libc@0.2.179
+	libc@0.2.180
 	libcrux-intrinsics@0.0.4
 	libcrux-ml-kem@0.0.4
 	libcrux-platform@0.0.2
@@ -242,9 +243,9 @@ CRATES="
 	lock_api@0.4.14
 	log@0.4.29
 	loop9@0.1.5
-	lru@0.16.2
+	lru@0.16.3
 	lua-src@548.1.2
-	luajit-src@210.6.5+7152e15
+	luajit-src@210.6.6+707c12b
 	mac_address@1.1.8
 	matchers@0.2.0
 	maybe-rayon@0.1.1
@@ -259,6 +260,7 @@ CRATES="
 	mlua@0.11.5
 	mlua_derive@0.11.0
 	moxcms@0.7.11
+	moxcms@0.8.0
 	new_debug_unreachable@1.0.6
 	nix@0.29.0
 	nom@7.1.3
@@ -321,7 +323,7 @@ CRATES="
 	pkcs1@0.8.0-rc.4
 	pkcs5@0.7.1
 	pkcs8@0.10.2
-	pkcs8@0.11.0-rc.8
+	pkcs8@0.11.0-rc.9
 	pkg-config@0.3.32
 	plist@1.8.0
 	png@0.18.0
@@ -333,7 +335,7 @@ CRATES="
 	primeorder@0.13.6
 	proc-macro-error-attr2@2.0.0
 	proc-macro-error2@2.0.1
-	proc-macro2@1.0.104
+	proc-macro2@1.0.106
 	profiling-procmacros@1.0.17
 	profiling@1.0.17
 	pxfm@0.1.27
@@ -341,7 +343,7 @@ CRATES="
 	quantette@0.5.1
 	quick-error@2.0.1
 	quick-xml@0.38.4
-	quote@1.0.42
+	quote@1.0.43
 	r-efi@5.3.0
 	radium@0.7.0
 	rand@0.8.5
@@ -350,7 +352,7 @@ CRATES="
 	rand_chacha@0.9.0
 	rand_core@0.10.0-rc-3
 	rand_core@0.6.4
-	rand_core@0.9.3
+	rand_core@0.9.5
 	ratatui-core@0.1.0
 	ratatui-crossterm@0.1.0
 	ratatui-macros@0.7.0
@@ -372,11 +374,11 @@ CRATES="
 	rfc6979@0.4.0
 	rgb@0.8.52
 	ring@0.17.14
-	rsa@0.10.0-rc.11
+	rsa@0.10.0-rc.12
 	russh-cryptovec@0.52.0
 	russh-util@0.52.0
 	russh@0.56.0
-	rustc-demangle@0.1.26
+	rustc-demangle@0.1.27
 	rustc-hash@2.1.1
 	rustc_version@0.4.1
 	rustix@0.38.44
@@ -394,7 +396,7 @@ CRATES="
 	serde@1.0.228
 	serde_core@1.0.228
 	serde_derive@1.0.228
-	serde_json@1.0.148
+	serde_json@1.0.149
 	serde_spanned@1.0.4
 	serdect@0.4.2
 	sha1@0.10.6
@@ -429,7 +431,7 @@ CRATES="
 	strum_macros@0.27.2
 	subtle@2.6.1
 	syn@1.0.109
-	syn@2.0.113
+	syn@2.0.114
 	syntect@5.3.0
 	tap@1.0.1
 	terminfo@0.9.0
@@ -437,22 +439,23 @@ CRATES="
 	termios@0.3.3
 	termwiz@0.23.3
 	thiserror-impl@1.0.69
-	thiserror-impl@2.0.17
+	thiserror-impl@2.0.18
 	thiserror@1.0.69
-	thiserror@2.0.17
+	thiserror@2.0.18
 	thread_local@1.1.9
+	tiff@0.10.3
 	tikv-jemalloc-sys@0.6.1+5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7
 	tikv-jemallocator@0.6.1
-	time-core@0.1.6
-	time-macros@0.2.24
-	time@0.3.44
+	time-core@0.1.7
+	time-macros@0.2.25
+	time@0.3.45
 	tls_codec@0.4.2
 	tls_codec_derive@0.4.2
 	tokio-macros@2.6.0
-	tokio-stream@0.1.17
-	tokio-util@0.7.17
+	tokio-stream@0.1.18
+	tokio-util@0.7.18
 	tokio@1.49.0
-	toml@0.9.10+spec-1.1.0
+	toml@0.9.11+spec-1.1.0
 	toml_datetime@0.7.5+spec-1.1.0
 	toml_parser@1.0.6+spec-1.1.0
 	toml_writer@1.0.6+spec-1.1.0
@@ -470,7 +473,7 @@ CRATES="
 	ucd-trie@0.1.7
 	unicode-ident@1.0.22
 	unicode-segmentation@1.12.0
-	unicode-truncate@2.0.0
+	unicode-truncate@2.0.1
 	unicode-width@0.2.2
 	universal-hash@0.5.1
 	untrusted@0.9.0
@@ -480,20 +483,20 @@ CRATES="
 	uzers@0.12.2
 	v_frame@0.3.9
 	valuable@0.1.1
-	vergen-gitcl@1.0.8
-	vergen-lib@0.1.6
-	vergen@9.0.6
+	vergen-gitcl@9.1.0
+	vergen-lib@9.1.0
+	vergen@9.1.0
 	version_check@0.9.5
 	vtparse@0.6.2
 	walkdir@2.5.0
 	wasi@0.11.1+wasi-snapshot-preview1
-	wasip2@1.0.1+wasi-0.2.4
-	wasm-bindgen-futures@0.4.56
-	wasm-bindgen-macro-support@0.2.106
-	wasm-bindgen-macro@0.2.106
-	wasm-bindgen-shared@0.2.106
-	wasm-bindgen@0.2.106
-	web-sys@0.3.83
+	wasip2@1.0.2+wasi-0.2.9
+	wasm-bindgen-futures@0.4.58
+	wasm-bindgen-macro-support@0.2.108
+	wasm-bindgen-macro@0.2.108
+	wasm-bindgen-shared@0.2.108
+	wasm-bindgen@0.2.108
+	web-sys@0.3.85
 	weezl@0.1.12
 	wezterm-bidi@0.2.3
 	wezterm-blob-leases@0.1.1
@@ -547,18 +550,20 @@ CRATES="
 	windows_x86_64_msvc@0.53.1
 	winnow@0.7.14
 	winsafe@0.0.19
-	wit-bindgen@0.46.0
+	wit-bindgen@0.51.0
 	wyz@0.5.1
 	y4m@0.8.0
 	yazi-prebuilt@0.1.0
-	zerocopy-derive@0.8.31
-	zerocopy@0.8.31
+	zerocopy-derive@0.8.33
+	zerocopy@0.8.33
 	zeroize@1.8.2
 	zeroize_derive@1.4.3
-	zmij@1.0.9
-	zune-core@0.5.0
+	zmij@1.0.16
+	zune-core@0.4.12
+	zune-core@0.5.1
 	zune-inflate@0.2.54
-	zune-jpeg@0.5.8
+	zune-jpeg@0.4.21
+	zune-jpeg@0.5.11
 "
 
 inherit cargo desktop shell-completion xdg

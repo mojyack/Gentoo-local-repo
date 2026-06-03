@@ -1,0 +1,22 @@
+diff --git a/etc/udev/rules.d/99-touchbar-seat.rules b/etc/udev/rules.d/99-touchbar-seat.rules
+index 9b0cbde..120db6e 100644
+--- a/etc/udev/rules.d/99-touchbar-seat.rules
++++ b/etc/udev/rules.d/99-touchbar-seat.rules
+@@ -3,3 +3,4 @@ SUBSYSTEM=="drm", KERNEL=="card*", DRIVERS=="adp|appletbdrm", TAG-="master-of-se
+ SUBSYSTEM=="input", ATTR{name}=="Apple Inc. Touch Bar Display Touchpad", ENV{ID_SEAT}="seat-touchbar"
+ SUBSYSTEM=="input", ATTR{name}=="MacBookPro17,1 Touch Bar", ENV{ID_SEAT}="seat-touchbar"
+ SUBSYSTEM=="input", ATTR{name}=="Mac14,7 Touch Bar", ENV{ID_SEAT}="seat-touchbar"
++SUBSYSTEM=="input", ATTRS{name}=="*iBridge Touchpad", ENV{ID_SEAT}="seat-touchbar"
+diff --git a/src/main.rs b/src/main.rs
+index cd8de7c..2431a1d 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -989,7 +989,7 @@ fn real_main(drm: &mut DrmBackend) {
+             match event {
+                 Event::Device(DeviceEvent::Added(evt)) => {
+                     let dev = evt.device();
+-                    if dev.name().contains(" Touch Bar") {
++                    if dev.name().contains(" Touch Bar") || dev.name().contains(" iBridge Touchpad") {
+                         digitizer = Some(dev);
+                     }
+                 }

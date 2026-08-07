@@ -1,16 +1,15 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit git-r3 meson systemd
+inherit meson systemd
 
 DESCRIPTION="Input remap daemon for Linux"
 HOMEPAGE="https://github.com/mojyack/keyremap"
-EGIT_REPO_URI="https://github.com/mojyack/keyremap.git"
-EGIT_COMMIT="v$PV"
+SRC_URI="https://github.com/mojyack/keyremap/releases/download/v${PV}/keyremap-${PV}.tar.gz"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 LICENSE="MIT"
 SLOT="0"
 IUSE="systemd"

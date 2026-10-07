@@ -1,0 +1,93 @@
+From 9bbf3ff1eb9176d0167f5543d6479cd42b069bd2 Mon Sep 17 00:00:00 2001
+From: mojyack <mojyack@gmail.com>
+Date: Wed, 7 Oct 2026 15:08:27 +0900
+Subject: [PATCH] Drop ECM/Qt dependency from the data-only build
+
+KDEInstallDirs6 queries qtpaths, which drags in Qt just to install
+some XML files. Use GNUInstallDirs instead, and only require ECM for
+the Wayland find modules when BUILD_TESTING is enabled.
+---
+ CMakeLists.txt                        | 22 ++++++++--------------
+ PlasmaWaylandProtocolsConfig.cmake.in |  2 +-
+ src/CMakeLists.txt                    |  6 +++---
+ 3 files changed, 12 insertions(+), 18 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b20074c..bce0cd7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -8,36 +8,30 @@ project(PlasmaWaylandProtocols VERSION 1.23.0)
+ 
+ include(FeatureSummary)
+ include(CMakePackageConfigHelpers)
++include(GNUInstallDirs)
+ 
+-# ECM setup
+-find_package(ECM 6.0.0 NO_MODULE)
+-set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
+-feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
+-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/Modules)
+-include(KDEInstallDirs)
+-include(KDECMakeSettings)
+-include(ECMSetupVersion)
++option(BUILD_TESTING "Build the testing tree." OFF)
+ 
+ add_subdirectory(src)
+ 
+ if (BUILD_TESTING)
++    enable_testing()
++    # ECM is only needed for the Wayland find modules used by the tests
++    find_package(ECM 6.0.0 REQUIRED NO_MODULE)
++    set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/Modules)
+     find_package(WaylandScanner REQUIRED)
+     find_package(Wayland COMPONENTS Client REQUIRED)
+     add_subdirectory(autotests)
+ endif()
+ 
+ # create a Config.cmake and a ConfigVersion.cmake file and install them
+-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_DATAROOTDIR}/cmake/PlasmaWaylandProtocols")
++set(CMAKECONFIG_INSTALL_DIR "${CMAKE_INSTALL_DATAROOTDIR}/cmake/PlasmaWaylandProtocols")
+ 
+ configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/PlasmaWaylandProtocolsConfig.cmake.in"
+                               "${CMAKE_CURRENT_BINARY_DIR}/PlasmaWaylandProtocolsConfig.cmake"
+                               INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+-                              PATH_VARS KDE_INSTALL_DATADIR
++                              PATH_VARS CMAKE_INSTALL_DATADIR
+                               )
+-ecm_setup_version(PROJECT VARIABLE_PREFIX PLASMA_WAYLAND_PROTOCOLS
+-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/plasma_wayland_protocols_version.h"
+-                        SOVERSION 5
+-)
+ write_basic_package_version_file("${CMAKE_CURRENT_BINARY_DIR}/PlasmaWaylandProtocolsConfigVersion.cmake"
+                                  COMPATIBILITY AnyNewerVersion
+                                  ARCH_INDEPENDENT
+diff --git a/PlasmaWaylandProtocolsConfig.cmake.in b/PlasmaWaylandProtocolsConfig.cmake.in
+index 9df93d2..b22cac3 100644
+--- a/PlasmaWaylandProtocolsConfig.cmake.in
++++ b/PlasmaWaylandProtocolsConfig.cmake.in
+@@ -6,4 +6,4 @@
+ 
+ include(CMakeFindDependencyMacro)
+ 
+-set(PLASMA_WAYLAND_PROTOCOLS_DIR "@PACKAGE_KDE_INSTALL_DATADIR@/plasma-wayland-protocols")
++set(PLASMA_WAYLAND_PROTOCOLS_DIR "@PACKAGE_CMAKE_INSTALL_DATADIR@/plasma-wayland-protocols")
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 9bab6d4..a5f56b2 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -34,9 +34,9 @@ install(FILES
+     protocols/wayland-eglstream-controller.xml
+     protocols/zkde-screencast-unstable-v1.xml
+ 
+-    DESTINATION ${KDE_INSTALL_DATADIR}/plasma-wayland-protocols)
++    DESTINATION ${CMAKE_INSTALL_DATADIR}/plasma-wayland-protocols)
+ 
+ # Backward compatibility for previously used non-standard protocol file names
+ # TODO KF6 remove
+-install(FILES protocols/zkde-screencast-unstable-v1.xml RENAME screencast.xml DESTINATION ${KDE_INSTALL_DATADIR}/plasma-wayland-protocols)
+-install(FILES protocols/org-kde-plasma-virtual-desktop.xml RENAME plasma-virtual-desktop.xml DESTINATION ${KDE_INSTALL_DATADIR}/plasma-wayland-protocols)
++install(FILES protocols/zkde-screencast-unstable-v1.xml RENAME screencast.xml DESTINATION ${CMAKE_INSTALL_DATADIR}/plasma-wayland-protocols)
++install(FILES protocols/org-kde-plasma-virtual-desktop.xml RENAME plasma-virtual-desktop.xml DESTINATION ${CMAKE_INSTALL_DATADIR}/plasma-wayland-protocols)
+-- 
+2.55.0
+
